@@ -1,0 +1,17 @@
+#main {
+	width: 650px;
+	height: 440px;
+	border: 2px solid black;
+	padding: 10px;
+	border-radius: 20px;
+	text-align: center;
+	box-sizing: content-box;  
+	margin: 0 auto;
+	display: block;
+}
+
+body {
+	position: relative;
+	padding-top: 12%;
+	background-color: #f2f1ed;
+}
