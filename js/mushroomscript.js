@@ -1,4 +1,16 @@
-function mushroomCalculatorGlobal() {
+function main() {
+	var recipeType = document.getElementById("recipe").value;
+	recipeType = parseInt(recipeType)
+	if (recipeType === 1) {
+		spicyMushroom();
+	}
+	else if (recipeType === 2) {
+		plainMushroom();
+	}
+}
+
+
+function spicyMushroom() {
 	var mushroom, tomato, bell, chili, garlic, onion, salt, pepper, sugar, oil, vinegar, pot, water;
 	mushroom = parseFloat(document.getElementById("mushroomWeight").value);
 	
@@ -32,6 +44,37 @@ function mushroomCalculatorGlobal() {
 		document.getElementById("mushroomOutput").innerHTML = "You need:<br>" + tomato + " g of Tomato Paste<br>" + bell + " g Bell Pepper<br>" + chili + 
 		" g of Chili Flakes<br>" + garlic + " g of Garlic<br>" + onion + " g of Onion<br>" + salt + " g of Salt<br>" + sugar + " g of Sugar<br>"
 		+ pepper + " g of Pepper<br>" + oil + " grams of Oil<br>" + vinegar + " grams of Vinegar<br>" + pot + " grams of potassium sorbate with "+ water + " grams water";
+		
+		}
+}	
+
+function plainMushroom() {
+	var mushroom, oil, cayenne, paprika, vinegar, sugar, salt, paste, pepper, gar_on, bell;
+	mushroom = parseFloat(document.getElementById("mushroomWeight").value);
+	
+	if (Number.isNaN(mushroom)) {
+		document.getElementById("mushroomOutput").innerHTML = "Please input a number.";
+		return;
+		}
+	else if (!mushroom>0) {
+		document.getElementById("mushroomOutput").innerHTML = "Please input a number greater than 0.";
+		return
+	}
+	else {
+		oil = mushroom*400;
+		cayenne = mushroom*12;
+		paprika = mushroom*3;
+		vinegar = mushroom*180;
+		sugar = mushroom*100;
+		salt = mushroom*75;
+		paste = mushroom*100;
+		pepper = mushroom*7.5;
+		gar_on = mushroom*250;
+		bell = mushroom*50;
+
+		document.getElementById("mushroomOutput").innerHTML = "You need:<br>" + oil + " g of Olive Oil<br>" + cayenne + " g Cayenne<br>" + paprika + 
+		" g of Paprika<br>" + vinegar + " g of Vinegar<br>" + sugar + " g of Sugar<br>" + salt + " g of Salt<br>" + paste + " g of Tomato Paste<br>"
+		+ pepper + " g of Pepper<br>" + gar_on + " grams of Garlic and Onion<br>" + bell + " grams of Bell Pepper<br>";
 		
 		}
 }	
