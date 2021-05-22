@@ -62,8 +62,8 @@ function plainMushroom() {
 	}
 	else {
 		oil = mushroom*400;
-		cayenne = mushroom*12;
-		paprika = mushroom*3;
+		cayenne = mushroom*10;
+		paprika = mushroom*5;
 		vinegar = mushroom*180;
 		sugar = mushroom*100;
 		salt = mushroom*75;
